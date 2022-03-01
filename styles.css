@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.slider-cont {
+  margin: 1em;
+  padding: 1em;
+}
+
+#grid {
+  background-color: lightgray;
+  box-sizing: border-box;
+  display: grid;
+  width: 600px;
+  height: 600px;
+}
