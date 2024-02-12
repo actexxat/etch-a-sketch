@@ -4,17 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Etch a Sketch</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="slider-cont">
-        <label for=""> 30 </label>
-        <input type="range" min="10" max="60" value="30" class="slider" />
-      </div>
-      <div id="grid"></div>
-      <script src="script.js"></script>
+    <div class="header">
+      <h1>Etch-A-Sketch.</h1>
     </div>
+      <div class="settings">
+        <div class="warn"> 
+          <p>* Increasing the resolution reduces performance *surprise!*
+            <br>
+            * you can use ctrl + left-clock to erase a pixel.
+          </p>
+        </div>
+        <div class="set_size">
+          <label id="size-indicator" for="size">Size: 30 </label>
+          <br>
+          <input name="size" type="number" min="10" max="100" value="30" class="sizer" />
+        </div>
+        <div class="set_color">
+          <label id="color-indicator" for="pallete">Color: Black  </label>
+          <br>
+          <input name="pallete" id="color-picker" type="color">
+         </div>
+         <div class="reset">
+          <label for="reset">Clean Canvas:</label>
+          <br>
+          <input id="reset" name="reset" type="button" value="Reset">
+        </div>
+
+      </div>
+      
+      <div id="grid"></div>
+      <div id="footer">
+        <p>♡ The Odin Project</p>
+      </div>
+      <script src="script.js"></script>
   </body>
 </html>
