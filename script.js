@@ -39,17 +39,18 @@ document.body.onmousedown = () => {mouseDown = true};
 document.body.onmouseup = () => {mouseDown = false};
 
 function createGrid(value) {
-  // this function creates a grid basd on chosen size
-  GRID.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
-  GRID.style.gridTemplateRows = `repeat(${value}, 1fr)`;
+  if(value < 120){  // this function creates a grid basd on chosen size
+    GRID.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    GRID.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 
-  // create a square grid with size*size dimensions
-  for (let i = 0; i < value * value; i++) {
-    let newDiv = document.createElement("div");
-    newDiv.style.border = '.1px solid rgba(112,112,112,0.05)';
-    newDiv.addEventListener("mouseover", paint);
-    newDiv.addEventListener("mousedown", paint);
-    GRID.appendChild(newDiv);
+    // create a square grid with size*size dimensions
+    for (let i = 0; i < value * value; i++) {
+      let newDiv = document.createElement("div");
+      newDiv.style.border = '.1px solid rgba(112,112,112,0.05)';
+      newDiv.addEventListener("mouseover", paint);
+      newDiv.addEventListener("mousedown", paint);
+      GRID.appendChild(newDiv);
+    }
   }
 }
 
