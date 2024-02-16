@@ -39,7 +39,7 @@ document.body.onmousedown = () => {mouseDown = true};
 document.body.onmouseup = () => {mouseDown = false};
 
 function createGrid(value) {
-  if(value < 120){  // this function creates a grid basd on chosen size
+  if(value < 121){  // this function creates a grid basd on chosen size
     GRID.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
     GRID.style.gridTemplateRows = `repeat(${value}, 1fr)`;
 
